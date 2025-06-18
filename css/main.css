@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-image: url('/img/Fundo_contato.png');
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1f1b1b;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.img_home {
+  height: 60px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  gap: 12px;
+}
+
+.li_nav a {
+  padding: 12px 20px;
+  background: linear-gradient(145deg, #222020, #1c1a1a);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  font-size: 16px;
+}
+
+.li_nav a:hover:not(.ativo) {
+  background: linear-gradient(145deg, #3a3f82, #2c3065);
+  transform: translateY(-2px);
+}
+
+.li_nav a.ativo {
+  background: linear-gradient(145deg, #808080, #696969);
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+/* Sobre */
+
+.sobre-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #1f1b1b;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.sobre-bloco h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  text-align: center;
+}
+
+.sobre-bloco p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.foto-perfil {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 20px auto;
+  border: 4px solid #3a3f82;
+}
+
+/* Contato */
+
+.contato-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.info-bloco, .form-bloco {
+  flex: 1;
+  min-width: 280px;
+  background: #1f1b1b;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.info-bloco h2, .form-bloco h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.info-bloco p, .info-contato p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.info-contato {
+  margin-top: 20px;
+  padding: 15px;
+  background: #2a2727;
+  border-radius: 8px;
+}
+
+.form-bloco form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-bloco input, .form-bloco textarea {
+  padding: 14px;
+  background: #2a2727;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.form-bloco button {
+  padding: 14px;
+  background: linear-gradient(145deg, #3a3f82, #2c3065);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-bloco button:hover {
+  background: linear-gradient(145deg, #4e53a8, #3a3f82);
+  transform: translateY(-2px);
+}
+
+.rodape {
+  text-align: center;
+  padding: 20px;
+  background: #1f1b1b;
+  margin-top: 60px;
+  font-size: 14px;
+}
