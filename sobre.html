@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Augusto | Sobre</title>
+  <title>Cibersegurança | Sobre</title>
   <link rel="stylesheet" href="css/main.css">
-
 </head>
 <body>
-
   <header class="topo">
-    <a href="sobre.html">
-      <img src="~/img/home.png" alt="Home" class="img_home">
+    <a href="index.html">
+      <img src="img/home.png" alt="Home" class="img_home">
     </a>
     <nav>
       <ul class="nav">
         <li class="li_nav"><a class="ativo" href="sobre.html">Sobre</a></li>
         <li class="li_nav"><a href="#contato_nav">Contato</a></li>
-        <li class="li_nav"><a href="index.html">Cibersegurança</a></li>
+        <li class="li_nav"><a href="ciber.html">Cibersegurança</a></li>
       </ul>
     </nav>
+    <button id="theme-toggle-button">☀️</button>
   </header>
   <main>
-    <h2 style="text-align: center;">Sobre o Grupo</h2>
+    <br>
+    <h1 style="text-align: center;">Sobre o Grupo:</h1>
     <div style="display: flex; justify-content: space-around;">
       <div id="sobre">
         <section class="sobre-container">
@@ -66,6 +66,7 @@
             <p><strong>E-mail:</strong> augustospanholo@gmail.com</p>
             <p><strong>Telefone:</strong> (54) 9 9908-0061</p>
             <p><strong>E-mail:</strong> felipeclaas@email.com</p>
+            <p><strong>Telefone:</strong> (54) 9 9703-2253</p>
             
           </div>
         </div>
@@ -76,7 +77,7 @@
             <input type="text" name="nome" placeholder="Seu nome" required>
             <input type="email" name="email" placeholder="Seu e-mail" required>
             <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
-            <button type="submit">Enviar</button>
+            <button type="submit" onclick="formulario()">Enviar</button>
           </form>
         </div>
       </section>
