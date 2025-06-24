@@ -44,3 +44,20 @@ function theme() {
 }
 
 document.addEventListener('DOMContentLoaded', theme);
+
+
+const dicas = [
+  "Nunca use a mesma senha em diferentes serviços.",
+  "Ative a verificação em duas etapas para proteger suas contas.",
+  "Desconfie de links encurtados ou de origem desconhecida.",
+  "Prefira redes Wi-Fi seguras e evite públicas para transações.",
+  "Mantenha seu antivírus sempre atualizado.",
+  "Não compartilhe informações pessoais em redes sociais abertas.",
+  "Use senhas com mais de 12 caracteres.",
+  "Cuidado com promoções milagrosas na internet."
+];
+
+function mostrarDica() {
+  const dica = dicas[Math.floor(Math.random() * dicas.length)];
+  document.getElementById("dica-box").innerText = dica;
+}

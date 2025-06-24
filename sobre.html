@@ -17,7 +17,7 @@
       <ul class="nav">
         <li class="li_nav"><a class="ativo" href="sobre.html">Sobre</a></li>
         <li class="li_nav"><a href="#contato_nav">Contato</a></li>
-        <li class="li_nav"><a href="ciber.html">Cibersegurança</a></li>
+        <li class="li_nav"><a href="#ciber_nav">Cibersegurança</a></li>
       </ul>
     </nav>
     <button id="theme-toggle-button">☀️</button>
@@ -53,9 +53,10 @@
         </div>
       </div>
     </div>
-
+    
     <div id="contato">
-      <section class="contato-container" id="contato_nav">
+      <h1 style="text-align: center;" id="contato_nav">Contato</h1>
+      <section class="contato-container">
         <div class="info-bloco">
           <h2>Entre em Contato</h2>
           <p>Use o formulário ao lado para todas as solicitações de informações ou entre em contato diretamente utilizando as informações abaixo.</p>
@@ -85,6 +86,39 @@
         </div>
       </section>
     </div>
+
+    <div id="ciber_nav">
+    <section style="max-width: 900px; margin: 40px auto; padding: 20px;">
+      <h1 style="text-align:center;">Cartilha de Segurança Digital 🔒</h1>
+    </div>
+    
+  
+      <div class="dicas_ciber">
+        Fique seguro online! Confira as dicas abaixo para proteger seus dados e sua privacidade.
+      </div>
+  
+      <h2>📶 Ao navegar na internet</h2>
+      <p>Confira se há o ícone de cadeado 🔒 no navegador. Ele indica que o site usa HTTPS e é mais seguro.</p>
+      <p>Evite redes Wi-Fi públicas para realizar atividades sensíveis, como acessar contas bancárias.</p>
+      <p>Desconfie de promoções milagrosas como “Você ganhou um iPhone!”. Quase sempre é golpe.</p>
+  
+      <h2>🔐 Crie senhas fortes</h2>
+      <p>Prefira senhas longas com letras maiúsculas e minúsculas, números e símbolos.</p>
+      <p>Evite informações óbvias como datas de nascimento ou nomes de familiares e animais de estimação.</p>
+      <p>Ative a verificação em duas etapas. Assim, mesmo que alguém descubra sua senha, ainda precisará de um código adicional para acessar sua conta.</p>
+  
+      <h2>📧 Cuidados com e-mails</h2>
+      <p>Verifique sempre o remetente antes de abrir mensagens. Evite clicar em links ou baixar anexos de fontes desconhecidas.</p>
+      <p>Lembre-se: bancos e empresas sérias nunca pedem senhas ou dados pessoais por e-mail.</p>
+  
+      <h2>📥 Cuidado com o que você baixa</h2>
+      <p>Evite fazer download de aplicativos ou softwares de sites duvidosos. Isso pode expor seu dispositivo a vírus e malwares.</p>
+      <p>Mantenha seu antivírus sempre atualizado para ajudar a bloquear ameaças.</p>
+  
+      <button onclick="mostrarDica()" style="display:block; margin:30px auto; padding:14px 26px; background:#1f6feb; color:#fff; border:none; border-radius:8px; font-size:16px; cursor:pointer;">🎲 Me dê uma dica rápida!</button>
+  
+      <div id="dica-box" style="text-align:center; font-size:20px; margin:20px; color:#1f6feb; min-height:30px;"></div>
+    </section>
   </main>
 
   <footer class="rodape">
