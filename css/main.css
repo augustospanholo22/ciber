@@ -55,21 +55,38 @@ body {
   box-shadow: 0 0 10px rgba(255,255,255,0.2);
 }
 
-#theme-toggle-button {
-    background-color: #2a2727;
-    color: #fff;
-    border: 1px solid #444;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    font-size: 20px;
-    transition: all 0.3s ease;
-    margin-left: auto;
+#theme-button {
+  background-color: #2a2727;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  margin-left: auto;
 }
 
-#theme-toggle-button:hover {
-    transform: scale(1.1);
+#theme-button:hover {
+  transform: scale(1.1);
+}
+
+#font-button {
+  background-color: #2a2727;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+#font-button:hover {
+  transform: scale(1.1);
 }
 
 .rodape {
@@ -78,7 +95,198 @@ body {
   background: #1f1b1b;
   margin-top: 60px;
   font-size: 14px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
 }
+
+
+/* Blocos de Contato */
+
+.contato-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.info-bloco, .form-bloco {
+  flex: 1;
+  min-width: 280px;
+  background: #1f1b1b;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.info-bloco h2, .form-bloco h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.info-bloco p, .info-contato p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.info-contato {
+  margin-top: 20px;
+  padding: 15px;
+  background: #2a2727;
+  border-radius: 8px;
+}
+
+.form-bloco form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-bloco input, .form-bloco textarea {
+  padding: 14px;
+  background: #2a2727;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.4);
+}
+
+.form-bloco input:focus,
+.form-bloco textarea:focus {
+  outline: none;
+  border: 2px solid #4e53a8;
+  box-shadow: 0 0 10px rgba(78, 83, 168, 0.6);
+}
+
+.form-bloco button {
+  padding: 14px;
+  background: linear-gradient(145deg, #3a3f82, #2c3065);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-bloco button:hover {
+  background: linear-gradient(145deg, #4e53a8, #3a3f82);
+  transform: translateY(-2px);
+}
+
+.info-bloco:hover,
+.form-bloco:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Cards com Foto e Texto */
+
+.container-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  position: relative;
+  width: 450px;
+  height: 550px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.card-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  opacity: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 30%, rgba(0, 0, 0, 0) 90%);
+  transition: opacity 0.4s ease;
+  overflow-y: auto;
+}
+
+.card:hover .card-text {
+  opacity: 1;
+}
+
+.card:hover .card-text {
+  opacity: 1;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+
+/* Caixa de Dica */
+
+.dicas_ciber {
+  background: #1454a8;
+  padding: 15px;
+  border-left: 6px solid #1f6feb; 
+  margin: 20px 0; 
+  font-weight: bold;
+  text-align: center;
+}
+
+#dica-button{
+  display:block;
+  margin:30px auto;
+  padding:14px 26px;
+  background:#1f6feb;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+  transition: 0.3s;
+}
+
+#dica-button:hover{
+  transform: scale(1.1);
+}
+
+#dica-box{
+  text-align:center; 
+  font-size:20px; 
+  margin:20px; 
+  color:#1f6feb; 
+  min-height:30px;
+}
+
 
 /* Modo Claro */
 
@@ -111,24 +319,104 @@ body.light-mode {
   color: #555;
 }
 
-.light-mode #theme-toggle-button {
-    background-color: #e9e9f0;
-    color: #333;
+.light-mode #theme-button,
+.light-mode #font-button {
+  background-color: #e9e9f0;
+  color: #333;
 }
 
-.dicas_ciber {
-background: #1454a8;
-padding: 15px;
-border-left: 6px solid #1f6feb; 
-margin: 20px 0; 
-font-weight: bold;
-text-align: center;
+.light-mode .info-bloco,
+.light-mode .form-bloco {
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
-#dica_box {
-  text-align:center; 
-  font-size:20px; 
-  margin:20px; 
-  color:#1f6feb; 
-  min-height:30px;
+.light-mode .info-contato {
+  background: #f0f2f5;
+}
+
+.light-mode .form-bloco input,
+.light-mode .form-bloco textarea {
+  background: #f0f2f5;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.light-mode .form-bloco input:focus,
+.light-mode .form-bloco textarea:focus {
+  outline: none;
+  border-color: #787ed1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .form-bloco button {
+  color: white;
+}
+
+.light-mode .form-bloco button:hover {
+  background: linear-gradient(145deg, #4e53a8, #3a3f82);
+}
+
+.light-mode .card {
+  background: linear-gradient(135deg, #dfe9f3, #ffffff);
+  color: #1a1a1a;
+}
+
+.light-mode .card img {
+  border-radius: 10px;
+}
+
+.light-mode .card-text {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0) 90%);
+  color: #1a1a1a;
+}
+
+.light-mode.font-large .card-text {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.85) 80%, rgba(255, 255, 255, 0) 110%);
+  color: #1a1a1a;
+}
+
+.light-mode .dicas_ciber{
+  background-color: #4f7db8;
+  color: white;
+}
+
+.light-mode #dica-button{
+  background-color: white;
+  color: #2c3e50;
+}
+
+.light-mode #dica-box{
+  color: #2c3e50;
+}
+
+
+/* Modo Acessibilidade */
+
+body.font-large {
+  font-size: 120%;
+}
+
+.font-large .li_nav,
+.font-large .rodape,
+.font-large p,
+.font-large a,
+.font-large input,
+.font-large textarea,
+.font-large button,
+.font-large #dica-button {
+  font-size: 120%;
+}
+
+.font-large h1,
+.font-large h2{
+  font-size: 200%;
+}
+
+.font-large #dica-box{
+  font-size: 150%;
+}
+
+.font-large .card-text {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 60%, rgba(0, 0, 0, 0) 90%);
 }

@@ -16,7 +16,7 @@ function formulario(){
 
 // Botão do Tema
 function theme() {
-  const themeToggleButton = document.getElementById('theme-toggle-button');
+  const themeButton = document.getElementById('theme-button');
   const body = document.body;
 
   const toggleLightMode = () => {
@@ -24,10 +24,10 @@ function theme() {
 
     if (body.classList.contains('light-mode')) {
       localStorage.setItem('theme', 'light');
-      themeToggleButton.textContent = '🌙';
+      themeButton.textContent = '🌙';
     } else {
       localStorage.setItem('theme', 'dark');
-      themeToggleButton.textContent = '☀️';
+      themeButton.textContent = '☀️';
     }
   };
 
@@ -35,17 +35,15 @@ function theme() {
 
   if (savedTheme === 'light') {
     body.classList.add('light-mode');
-    themeToggleButton.textContent = '🌙';
+    themeButton.textContent = '🌙';
   } else {
-    themeToggleButton.textContent = '☀️';
+    themeButton.textContent = '☀️';
   }
 
-  themeToggleButton.addEventListener('click', toggleLightMode);
+  themeButton.addEventListener('click', toggleLightMode);
 }
 
-document.addEventListener('DOMContentLoaded', theme);
-
-
+// Botão de Dicas de Segurança
 const dicas = [
   "Nunca use a mesma senha em diferentes serviços.",
   "Ative a verificação em duas etapas para proteger suas contas.",
@@ -61,3 +59,15 @@ function mostrarDica() {
   const dica = dicas[Math.floor(Math.random() * dicas.length)];
   document.getElementById("dica-box").innerText = dica;
 }
+
+// Botão de Acessibilidade
+document.addEventListener('DOMContentLoaded', function() {
+    
+    theme();
+
+    const fontButton = document.getElementById('font-button');
+    
+    fontButton.addEventListener('click', function() {
+        document.body.classList.toggle('font-large');
+    });
+});
